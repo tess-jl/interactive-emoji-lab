@@ -19,6 +19,15 @@ describe('mood reducer tests', () => {
     expect(newState).toEqual({ snacks: 2 });
   });
 
+  it('handles the TAKE_NAP action', () => {
+    const action = takeNap();
+    const initialState = { naps: 1 };
+
+    const newState = reducer(initialState, action);
+
+    expect(newState).toEqual({ naps: 2 });
+  });
+
 
 
 
