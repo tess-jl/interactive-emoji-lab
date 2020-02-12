@@ -27,6 +27,14 @@ describe('tests for mood selectors', () => {
 
     expect(hyper).toEqual(true);
   });
+  it('can select for isHypser', () => {
+    const state = {
+      coffees: 3
+    };
+    const hyper = isHyper(state);
+
+    expect(hyper).toEqual(false);
+  });
 
 });
 
