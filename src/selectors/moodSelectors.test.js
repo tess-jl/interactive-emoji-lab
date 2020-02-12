@@ -51,7 +51,6 @@ describe('tests for mood selectors', () => {
 
     expect(ed).toEqual(false);
   });
-
   it('can select for isHungry true', () => {
     const state = {
       snacks: 0
@@ -60,7 +59,6 @@ describe('tests for mood selectors', () => {
 
     expect(hunger).toEqual(true);
   });
-
   it('can select for isHungry false', () => {
     const state = {
       studies: 1
@@ -69,6 +67,5 @@ describe('tests for mood selectors', () => {
 
     expect(hunger).toEqual(false);
   });
-
 });
 
