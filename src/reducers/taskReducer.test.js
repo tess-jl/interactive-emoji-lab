@@ -28,9 +28,14 @@ describe('mood reducer tests', () => {
     expect(newState).toEqual({ naps: 2 });
   });
 
+  it('handles the STUDY action', () => {
+    const action = study();
+    const initialState = { studies: 1 };
 
+    const newState = reducer(initialState, action);
 
-
+    expect(newState).toEqual({ studies: 2 });
+  });
 
   it('handles the action it does not understand gracefully', () => {
     const action = { type: 'WRITE_CODE' };
