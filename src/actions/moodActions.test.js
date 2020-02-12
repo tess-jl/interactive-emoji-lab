@@ -18,6 +18,23 @@ describe('mood actions', () => {
     });
   });
 
+  it('creates an eat snack action', () => {
+    const action = eatSnack();
+
+    expect(action).toEqual({
+      type: EAT_SNACK
+    });
+  });
+
+  it('creates a take nap action', () => {
+    const action = takeNap();
+
+    expect(action).toEqual({
+      type: TAKE_NAP
+    });
+  });
+
+
 
 });
 
