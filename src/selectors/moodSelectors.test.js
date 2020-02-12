@@ -10,7 +10,6 @@ describe('tests for mood selectors', () => {
 
     expect(tired).toEqual(true);
   });
-
   it('can select for isTired false', () => {
     const state = {
       coffees: 1, 
@@ -19,6 +18,14 @@ describe('tests for mood selectors', () => {
     const tired = isTired(state);
 
     expect(tired).toEqual(false);
+  });
+  it('can select for isHypser', () => {
+    const state = {
+      coffees: 4
+    };
+    const hyper = isHyper(state);
+
+    expect(hyper).toEqual(true);
   });
 
 });
