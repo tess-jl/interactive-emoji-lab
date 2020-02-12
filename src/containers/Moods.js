@@ -1,13 +1,23 @@
+//import React, { useReducer } from 'react';
+//import taskReducer from '../reducers/taskReducer';
+//import { isTired, isHyper, isEducated, isHungry } from '../selectors/moodSelectors';
+
+//const MoodPage = () => {
+//   const [tasks, dispatch] = useReducer(taskReducer, []);
+// }
+
+
 import React, { Component } from 'react';
 import Controls from '../components/controls/Controls';
 import Face from '../components/face/Face';
 
-// const actions = [
-//   { name: 'DRINK_COFFEE', text: 'Drink Coffee', stateName: 'coffees' },
-//   { name: 'EAT_SNACK', text: 'Snack', stateName: 'snacks' },
-//   { name: 'TAKE_NAP', text: 'Nap', stateName: 'naps' },
-//   { name: 'STUDY', text: 'Study', stateName: 'studies' },
-// ];
+
+const actions = [
+  { name: 'DRINK_COFFEE', text: 'Drink Coffee', stateName: 'coffees' },
+  { name: 'EAT_SNACK', text: 'Snack', stateName: 'snacks' },
+  { name: 'TAKE_NAP', text: 'Nap', stateName: 'naps' },
+  { name: 'STUDY', text: 'Study', stateName: 'studies' },
+];
 
 export const isTired = state => state.coffees < 1 && state.naps < 1;
 export const isHyper = state => state.coffees > 3;
