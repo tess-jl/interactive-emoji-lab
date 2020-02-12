@@ -1,7 +1,7 @@
 import { isTired, isHyper, isEducated, isHungry } from './moodSelectors'; 
 
 describe('tests for mood selectors', () => {
-  it('can select for isTired', () => {
+  it('can select for isTired true', () => {
     const state = {
       coffees: 0, 
       naps: 0
@@ -9,6 +9,16 @@ describe('tests for mood selectors', () => {
     const tired = isTired(state);
 
     expect(tired).toEqual(true);
+  });
+
+  it('can select for isTired false', () => {
+    const state = {
+      coffees: 1, 
+      naps: 1
+    };
+    const tired = isTired(state);
+
+    expect(tired).toEqual(false);
   });
 
 });
