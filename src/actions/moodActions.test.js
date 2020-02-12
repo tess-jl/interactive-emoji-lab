@@ -34,6 +34,13 @@ describe('mood actions', () => {
     });
   });
 
+  it('creates a study action', () => {
+    const action = study();
+
+    expect(action).toEqual({
+      type: STUDY
+    });
+  });
 
 
 });
