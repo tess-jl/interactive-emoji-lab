@@ -16,8 +16,8 @@ Controls.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     text: PropTypes.string, 
-    count: PropTypes.number.isRequired, 
-    actionCreator: PropTypes.func.isRequired
+    count: PropTypes.number, 
+    actionCreator: PropTypes.func
   })).isRequired
 };
 
