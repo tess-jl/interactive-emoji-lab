@@ -15,7 +15,9 @@ const Controls = ({ actions }) => (
 Controls.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    text: PropTypes.string
+    text: PropTypes.string, 
+    count: PropTypes.number.isRequired, 
+    actionCreator: PropTypes.func.isRequired
   })).isRequired
 };
 
