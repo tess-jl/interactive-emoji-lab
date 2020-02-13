@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Controls.css';
 
-const Controls = ({ actions, handleSelection }) => (
+const Controls = ({ actions }) => (
   <section className={styles.Controls}>
-    {actions.map(({ name, text, count }) => (
-      <button key={name} onClick={() => handleSelection(name)}>
+    {actions.map(({ name, text, count, actionCreator }) => (
+      <button key={name} onClick={actionCreator}>
         {text || name} {!!count && `- ${count}`}
       </button>
     ))}
@@ -16,8 +16,8 @@ Controls.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     text: PropTypes.string
-  })).isRequired,
-  handleSelection: PropTypes.func.isRequired
+  })).isRequired
 };
 
 export default Controls;
+
