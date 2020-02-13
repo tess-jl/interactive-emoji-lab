@@ -7,7 +7,7 @@ import {
   takeNap, 
   STUDY, 
   study 
-} from './moodActions';
+} from './taskActions';
 
 describe('mood actions', () => {
   it('creates a drink coffee action', () => {

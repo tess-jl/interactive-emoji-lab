@@ -20,10 +20,5 @@ describe('Controls component', () => {
   it('renders Controls', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('handlesSelection with the action name', () => {
-    wrapper.findWhere(el => el.key() === 'DO_STUFF').simulate('click');
-    expect(handleSelection).toHaveBeenCalledWith('DO_STUFF');
-  });
 });
   

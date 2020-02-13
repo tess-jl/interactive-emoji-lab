@@ -6,15 +6,15 @@ exports[`Controls component renders Controls 1`] = `
 >
   <button
     key="DO_STUFF"
-    onClick={[Function]}
   >
     stuff
+     
   </button>
   <button
     key="other"
-    onClick={[Function]}
   >
     other
+     
   </button>
 </section>
 `;
